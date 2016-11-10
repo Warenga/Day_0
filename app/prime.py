@@ -9,12 +9,12 @@ def is_prime(num):
 		return False
 
 def prime_numbers(num):
-	if not isinstance(num, int):
-		return "Only integers allowed"
-	elif num < 0:
-		return "Only Positive numbers allowed"
+	if not isinstance(num, int) or num < 0:
+		return "Invalid input"
 	elif num == 2:
 		prime = [2]
 	else:
-		prime = [i for i in range(2, num) if is_prime(i)]
+		prime = [i for i in xrange(2, num) if is_prime(i)]
 	return prime
+
+print prime_numbers(0)
