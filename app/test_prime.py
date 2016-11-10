@@ -13,5 +13,18 @@ class PrimeNumbersTest(unittest.TestCase):
 	def test_number_less_than_two(self):
 		self.assertEqual(prime_numbers(1), [])
 
-	def test_validity(self):
+	def test_validity_one(self):
 		self.assertEqual(prime_numbers(10), [2, 3, 5, 7])
+
+	def test_validity_two(self):
+		self.assertEqual(prime_numbers(20), [2, 3, 5, 7, 11, 13, 17, 19] )
+
+	def test_validity_number_two(self):
+		self.assertEqual(prime_numbers(2), [2])
+
+	def test_number_if_list(self):
+		self.assertEqual(prime_numbers([]), "Only integers allowed")
+
+	
+
+
