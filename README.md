@@ -12,7 +12,7 @@ Andela Bootcamp 12: Day 0
 	- Returns the list.
 
 2. Testing
-	- Runs the application with 11 unittest.
+	- Runs the application with 11 unittests.
 
 ## Run it locally
 ----------------------------------------------------
