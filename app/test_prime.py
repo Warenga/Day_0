@@ -22,9 +22,12 @@ class PrimeNumbersTest(unittest.TestCase):
 	def test_validity_number_two(self):
 		self.assertEqual(prime_numbers(2), [2])
 
+	def test_validity_of_big_numbers(self):
+		self.assertEqual(prime_numbers(100), [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97])
+
 	def test_number_if_list(self):
 		self.assertEqual(prime_numbers([]), "Only integers allowed")
 
-	
+
 
 

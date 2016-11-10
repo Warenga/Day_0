@@ -15,8 +15,6 @@ def prime_numbers(num):
 		return "Only Positive numbers allowed"
 	elif num == 2:
 		prime = [2]
-		return prime
 	else:
 		prime = [i for i in range(2, num) if is_prime(i)]
-		return prime
-
+	return prime
