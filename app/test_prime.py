@@ -1,4 +1,4 @@
-from prime import prime_numbers
+from prime import prime_numbers, is_prime
 
 import unittest
 
@@ -16,11 +16,11 @@ class PrimeNumbersTest(unittest.TestCase):
 	def test_validity_ten(self):
 		self.assertEqual(prime_numbers(10), [2, 3, 5, 7])
 
-	def test_validity_twenty(self):
-		self.assertEqual(prime_numbers(20), [2, 3, 5, 7, 11, 13, 17, 19] )
-
 	def test_validity_number_two(self):
 		self.assertEqual(prime_numbers(2), [2])
+
+	def test_validity_twenty(self):
+		self.assertNotEqual(prime_numbers(3), [])
 
 	def test_validity_big_numbers(self):
 		self.assertEqual(prime_numbers(100), [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97])
@@ -30,6 +30,12 @@ class PrimeNumbersTest(unittest.TestCase):
 
 	def test_output_is_list(self):
 		self.assertEqual(prime_numbers(0), [])
+
+	def test_is_prime(self):
+		self.assertIs(is_prime(7), True)
+
+	def test_is_not_prime(self):
+		self.assertIsNot(is_prime(9), True)
 
 
 
