@@ -10,7 +10,6 @@ def is_prime(num):
 		return False
 
 def prime_numbers(num):
-	start = time.time()
 
 	prime = []
 
