@@ -10,8 +10,7 @@ def is_prime(num):
 			if num % i == 0:
 				return False
 		return True
-	else:
-		return False
+	return False
 
 def prime_numbers(num):
 	"""
