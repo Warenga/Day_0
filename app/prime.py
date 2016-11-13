@@ -1,3 +1,4 @@
+import math
 
 def is_prime(num):
 	"""
@@ -6,7 +7,7 @@ def is_prime(num):
 	it returns False.
 	"""
 	if num > 1:
-		for i in range(2, num):
+		for i in range(2, int(math.sqrt(num)) + 1 ):
 			if num % i == 0:
 				return False
 		return True
@@ -21,7 +22,5 @@ def prime_numbers(num):
 	elif num == 2:
 		prime = [2]
 	else:
-		prime = [i for i in xrange(2, num) if is_prime(i)]
+		prime = [i for i in range(2, num, 2) if is_prime(i)]
 	return prime
-
-print prime_numbers(3)
